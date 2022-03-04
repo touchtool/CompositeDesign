@@ -6,3 +6,5 @@ bin/
 java_week5.iml
 Ungroup.iml
 src.zip
+.classpath
+.project
