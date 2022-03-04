@@ -20,6 +20,7 @@ public class Window extends JFrame {
 	private JButton ovalButton = new JButton("Create Oval");
 	private JButton rectButton = new JButton("Create Rect");
 	private JButton groupAllButton = new JButton("Group All");
+	private JButton ungroupButton = new JButton("Ungroup");
 	private JButton deleteButton = new JButton("Delete");
 	private JButton clearButton = new JButton("Clear All");
 
@@ -51,6 +52,7 @@ public class Window extends JFrame {
 		bottomPanel.setLayout(new FlowLayout());
 		add(bottomPanel, BorderLayout.SOUTH);
 		bottomPanel.add(groupAllButton);
+		bottomPanel.add(ungroupButton);
 		bottomPanel.add(deleteButton);
 		bottomPanel.add(clearButton);
 
@@ -77,6 +79,13 @@ public class Window extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				drawPanel.groupAll();
+			}
+		});
+		ungroupButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				drawPanel.ungroup();
 			}
 		});
 		deleteButton.addActionListener(new ActionListener() {

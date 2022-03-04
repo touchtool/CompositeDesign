@@ -38,6 +38,10 @@ public class DrawingBoard extends JPanel {
 		repaint();
 	}
 
+	public void ungroup() {
+
+	}
+
 	public void deleteSelected() {
 		for(GObject obj : gObjects) {
 			if(obj.isSelected()) {
