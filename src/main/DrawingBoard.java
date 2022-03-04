@@ -39,7 +39,12 @@ public class DrawingBoard extends JPanel {
 	}
 
 	public void ungroup() {
-
+		CompositeGObject composite = new CompositeGObject();
+		for(GObject obj : gObjects) {
+			composite.remove(obj);
+		}
+		gObjects.clear();
+		repaint();
 	}
 
 	public void deleteSelected() {

@@ -20,7 +20,8 @@ public class CompositeGObject extends GObject {
 	}
 
 	public void remove(GObject gObject) {
-		// TODO: Implement this method.
+		gObjects.remove(gObject);
+		recalculateRegion();
 	}
 
 	@Override
@@ -67,7 +68,9 @@ public class CompositeGObject extends GObject {
 
 	@Override
 	public void paintLabel(Graphics g) {
-		// TODO: Implement this method.
+		for(GObject obj: gObjects) {
+			obj.paintLabel(g);
+		}
 	}
 	
 }
